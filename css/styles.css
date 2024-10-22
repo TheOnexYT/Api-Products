@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+}
+
+footer {
+    background: linear-gradient(to right, #007bff, #0056b3, #001f3f);
+    padding: 20px 0;
+}
+
+.header-gradient {
+    background: linear-gradient(to right, #007bff, #0056b3, #001f3f);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+body {
+    margin-top: 7% !important;
+}
+
+img {
+    object-fit: cover;
+}
+
+.img-zoom:hover {
+    transform: scale(1.4);
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        margin-top: 25% !important;
+    }
+}
+
+li {
+    color: inherit; /* Evita que se aplique un color directo a los elementos de la lista */
+}
+
+/* Contenedor de productos */
+/* Contenedor de productos */
+#productContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas con tamaño igual */
+    gap: 1rem; /* Espacio entre las cards */
+    justify-items: center; /* Centrar las cards horizontalmente */
+    margin: 0 auto; /* Centrar todo el contenedor en la página */
+    max-width: 1200px; /* Limitar el ancho total para pantallas grandes */
+}
+
+/* Ajustes para pantallas más pequeñas (tablets y móviles) */
+@media only screen and (max-width: 768px) {
+    #productContainer {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards por fila en pantallas medianas */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #productContainer {
+        grid-template-columns: 1fr; /* 1 card por fila en pantallas pequeñas */
+    }
+}
+
+/* Contenedor de la card */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Asegurar que las tarjetas ocupen todo el espacio asignado en la grid */
+    max-width: 300px;
+}
+
+/* Imagen dentro de la card */
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 300px;
+}
+
+.card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+
+
